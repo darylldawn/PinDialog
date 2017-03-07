@@ -15,6 +15,7 @@
     NSString* message = [command argumentAtIndex:0];
     NSString* title = [command argumentAtIndex:1];
     NSArray* buttons = [command argumentAtIndex:2];
+    NSString* defaultText = [command argumentAtIndex:3];
     
     UIAlertView* alertView = [[UIAlertView alloc]
                                initWithTitle:title
@@ -33,6 +34,7 @@
     
     alertView.alertViewStyle = UIAlertViewStyleSecureTextInput;
     UITextField* textField = [alertView textFieldAtIndex:0];
+    textField.text = defaultText;
     
     [alertView show];
 
