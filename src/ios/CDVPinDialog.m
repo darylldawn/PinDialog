@@ -35,7 +35,7 @@
     alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
     UITextField* textField = [alertView textFieldAtIndex:0];
     textField.text = defaultText;
-    
+    print(defaultText);
     [alertView show];
 
     [textField resignFirstResponder];
